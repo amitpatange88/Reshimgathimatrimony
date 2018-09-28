@@ -1,0 +1,7 @@
+CREATE TABLE AppConstants (
+    Id UNIQUEIDENTIFIER PRIMARY KEY default NEWID(),
+    Constant varchar(255),
+	Value varchar(255)
+);
+
+INSERT INTO AppConstants VALUES (default,'Company', 'Reshimgathi Matrimony')

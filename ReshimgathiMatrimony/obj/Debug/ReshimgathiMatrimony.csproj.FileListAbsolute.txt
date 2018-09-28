@@ -68,6 +68,9 @@ C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\Microsoft.AI.Depe
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\Microsoft.AI.WindowsServer.xml
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\Microsoft.AI.Web.xml
-C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\obj\Debug\ReshimgathiMatrimony.csprojResolveAssemblyReference.cache
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\obj\Debug\ReshimgathiMatrimony.dll
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\obj\Debug\ReshimgathiMatrimony.pdb
+C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\EntityFramework.dll
+C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\EntityFramework.SqlServer.dll
+C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\EntityFramework.xml
+C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\EntityFramework.SqlServer.xml

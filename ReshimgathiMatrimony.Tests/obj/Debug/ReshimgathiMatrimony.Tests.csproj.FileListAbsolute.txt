@@ -58,3 +58,5 @@ C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\bin\Debug\Syste
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\obj\Debug\ReshimgathiMatrimony.Tests.csprojResolveAssemblyReference.cache
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\obj\Debug\ReshimgathiMatrimony.Tests.dll
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\obj\Debug\ReshimgathiMatrimony.Tests.pdb
+C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\bin\Debug\EntityFramework.dll
+C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\bin\Debug\EntityFramework.xml

@@ -10,9 +10,12 @@ namespace ReshimgathiMatrimony.Controllers
     {
         public ActionResult Index()
         {
+            ReshimgathiMatrimonyEntities dbContext = new ReshimgathiMatrimonyEntities();
+            var appConstantsValues = dbContext.AppConstants.Take(1);
             ViewBag.Title = "Home Page";
+            ViewBag.Company = appConstantsValues.Select(x=>x.Value).FirstOrDefault();
 
-            return View();
+            return View(); 
         }
     }
 }
