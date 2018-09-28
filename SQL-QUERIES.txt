@@ -5,3 +5,20 @@ CREATE TABLE AppConstants (
 );
 
 INSERT INTO AppConstants VALUES (default,'Company', 'Reshimgathi Matrimony')
+
+
+-----------------------------------------------------------
+
+
+CREATE TABLE Login (
+    Id UNIQUEIDENTIFIER PRIMARY KEY default NEWID(),
+    UserName varchar(255),
+	Password varchar(255),
+	UserType varchar(255),
+	IsVerified BIT   NULL   DEFAULT 0,
+	CreateDate datetime,
+	UpdatedDate datetime
+);
+
+
+INSERT INTO Login VALUES (default, 'amit', 'amit', 'U', 0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)

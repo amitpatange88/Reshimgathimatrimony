@@ -74,3 +74,4 @@ C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\EntityFramework.d
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\EntityFramework.SqlServer.dll
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\EntityFramework.xml
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\EntityFramework.SqlServer.xml
+C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\obj\Debug\ReshimgathiMatrimony.csprojResolveAssemblyReference.cache

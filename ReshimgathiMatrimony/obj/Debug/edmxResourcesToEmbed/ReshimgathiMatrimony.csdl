@@ -10,5 +10,18 @@
   </EntityType>
   <EntityContainer Name="ReshimgathiMatrimonyEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="AppConstants" EntityType="Self.AppConstant" />
+    <EntitySet Name="Logins" EntityType="ReshimgathiMatrimonyModel.Login" />
   </EntityContainer>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="UserType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsVerified" Type="Boolean" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
 </Schema>
