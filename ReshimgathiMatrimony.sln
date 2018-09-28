@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.48
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReshimgathiMatrimony", "ReshimgathiMatrimony\ReshimgathiMatrimony.csproj", "{87080066-D376-482A-9F04-C878A7636468}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReshimgathiMatrimony.Tests", "ReshimgathiMatrimony.Tests\ReshimgathiMatrimony.Tests.csproj", "{5B3592BB-5D19-4FE8-89B1-81ED0B68689B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87080066-D376-482A-9F04-C878A7636468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87080066-D376-482A-9F04-C878A7636468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87080066-D376-482A-9F04-C878A7636468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87080066-D376-482A-9F04-C878A7636468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B3592BB-5D19-4FE8-89B1-81ED0B68689B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B3592BB-5D19-4FE8-89B1-81ED0B68689B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B3592BB-5D19-4FE8-89B1-81ED0B68689B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B3592BB-5D19-4FE8-89B1-81ED0B68689B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
