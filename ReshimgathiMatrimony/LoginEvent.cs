@@ -12,13 +12,13 @@ namespace ReshimgathiMatrimony
     using System;
     using System.Collections.Generic;
     
-    public partial class Login
+    public partial class LoginEvent
     {
         public System.Guid Id { get; set; }
-        public string UserName { get; set; }
-        public string Password { get; set; }
-        public Nullable<bool> UserType { get; set; }
-        public Nullable<bool> IsVerified { get; set; }
+        public string LoginId { get; set; }
+        public string LastLoginDate { get; set; }
+        public Nullable<bool> FailedAttempts { get; set; }
+        public string IPAddress { get; set; }
         public Nullable<System.DateTime> CreateDate { get; set; }
         public Nullable<System.DateTime> UpdatedDate { get; set; }
     }

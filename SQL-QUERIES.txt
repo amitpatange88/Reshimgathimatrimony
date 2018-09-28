@@ -14,11 +14,45 @@ CREATE TABLE Login (
     Id UNIQUEIDENTIFIER PRIMARY KEY default NEWID(),
     UserName varchar(255),
 	Password varchar(255),
-	UserType varchar(255),
+	UserType BIT   NULL   DEFAULT 0,
 	IsVerified BIT   NULL   DEFAULT 0,
-	CreateDate datetime,
-	UpdatedDate datetime
+	CreateDate datetime DEFAULT CURRENT_TIMESTAMP,
+	UpdatedDate datetime DEFAULT CURRENT_TIMESTAMP
+);
+
+//last login date.
+
+
+INSERT INTO Login VALUES (default, 'amit', 'amit', 0, 0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+
+
+
+----------------------------------------------
+
+CREATE TABLE InitialRegistration (
+    Id UNIQUEIDENTIFIER,
+    FirstName varchar(255),
+	LastName varchar(255),
+	PhoneNumber varchar(25),
+	IsPhoneVerified BIT   NULL   DEFAULT 0,
+	EmailId varchar(255),
+	IsEmailVerified BIT   NULL   DEFAULT 0,
+	CreateDate datetime DEFAULT CURRENT_TIMESTAMP,
+	UpdatedDate datetime DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO InitialRegistration VALUES (default, 'Amit', 'Patange', '7709981177', 0, 'amitpatange88@gmail.com', 0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+
+------------------------------------
+
+CREATE TABLE LoginEvents (
+    Id UNIQUEIDENTIFIER PRIMARY KEY default NEWID(),
+    LoginId varchar(255),
+	LastLoginDate varchar(255),
+	FailedAttempts BIT NULL DEFAULT 0,
+	IPAddress varchar(255),
+	CreateDate datetime DEFAULT CURRENT_TIMESTAMP,
+	UpdatedDate datetime DEFAULT CURRENT_TIMESTAMP
 );
 
 
-INSERT INTO Login VALUES (default, 'amit', 'amit', 'U', 0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)

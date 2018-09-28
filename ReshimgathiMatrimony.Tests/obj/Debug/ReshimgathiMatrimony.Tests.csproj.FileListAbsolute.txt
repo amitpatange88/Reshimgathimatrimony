@@ -42,6 +42,7 @@ C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\bin\Debug\Syste
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\bin\Debug\System.Web.WebPages.dll
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\bin\Debug\System.Web.WebPages.Razor.dll
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\bin\Debug\System.Web.Optimization.dll
+C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\bin\Debug\EntityFramework.dll
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\bin\Debug\ReshimgathiMatrimony.pdb
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\bin\Debug\ReshimgathiMatrimony.dll.config
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\bin\Debug\Newtonsoft.Json.xml
@@ -55,8 +56,7 @@ C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\bin\Debug\Syste
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\bin\Debug\System.Web.WebPages.Razor.xml
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\bin\Debug\System.Web.Optimization.xml
+C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\bin\Debug\EntityFramework.xml
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\obj\Debug\ReshimgathiMatrimony.Tests.csprojResolveAssemblyReference.cache
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\obj\Debug\ReshimgathiMatrimony.Tests.dll
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\obj\Debug\ReshimgathiMatrimony.Tests.pdb
-C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\bin\Debug\EntityFramework.dll
-C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony.Tests\bin\Debug\EntityFramework.xml

@@ -29,6 +29,8 @@ C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\ReshimgathiMatrim
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\ReshimgathiMatrimony.dll
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\ReshimgathiMatrimony.pdb
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\Antlr3.Runtime.dll
+C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\EntityFramework.dll
+C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\EntityFramework.SqlServer.dll
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\Microsoft.AI.Agent.Intercept.dll
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\Microsoft.AI.DependencyCollector.dll
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -50,6 +52,8 @@ C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\System.Web.WebPag
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\System.Web.WebPages.dll
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\System.Web.WebPages.Razor.dll
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\WebGrease.dll
+C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\EntityFramework.xml
+C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\EntityFramework.SqlServer.xml
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\Newtonsoft.Json.xml
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\System.Net.Http.Formatting.xml
@@ -70,8 +74,3 @@ C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\Microsoft.AI.Wind
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\Microsoft.AI.Web.xml
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\obj\Debug\ReshimgathiMatrimony.dll
 C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\obj\Debug\ReshimgathiMatrimony.pdb
-C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\EntityFramework.dll
-C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\EntityFramework.SqlServer.dll
-C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\EntityFramework.xml
-C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\bin\EntityFramework.SqlServer.xml
-C:\E\VS-Programs\ReshimgathiMatrimony\ReshimgathiMatrimony\obj\Debug\ReshimgathiMatrimony.csprojResolveAssemblyReference.cache

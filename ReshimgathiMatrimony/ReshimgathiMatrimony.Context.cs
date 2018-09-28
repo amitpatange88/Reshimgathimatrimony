@@ -26,6 +26,7 @@ namespace ReshimgathiMatrimony
         }
     
         public virtual DbSet<AppConstant> AppConstants { get; set; }
+        public virtual DbSet<LoginEvent> LoginEvents { get; set; }
         public virtual DbSet<Login> Logins { get; set; }
     }
 }

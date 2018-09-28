@@ -10,8 +10,21 @@
   </EntityType>
   <EntityContainer Name="ReshimgathiMatrimonyEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="AppConstants" EntityType="Self.AppConstant" />
+    <EntitySet Name="LoginEvents" EntityType="ReshimgathiMatrimonyModel.LoginEvent" />
     <EntitySet Name="Logins" EntityType="ReshimgathiMatrimonyModel.Login" />
   </EntityContainer>
+  <EntityType Name="LoginEvent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="LoginId" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="LastLoginDate" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="FailedAttempts" Type="Boolean" />
+    <Property Name="IPAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
   <EntityType Name="Login">
     <Key>
       <PropertyRef Name="Id" />
@@ -19,7 +32,7 @@
     <Property Name="Id" Type="Guid" Nullable="false" />
     <Property Name="UserName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
     <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Name="UserType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="UserType" Type="Boolean" />
     <Property Name="IsVerified" Type="Boolean" />
     <Property Name="CreateDate" Type="DateTime" Precision="3" />
     <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
