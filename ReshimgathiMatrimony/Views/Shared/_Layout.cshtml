@@ -70,8 +70,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                             <ul class="nav navbar-nav nav_1">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About</a></li>
+                                <li><a href="../../Home/">Home</a></li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Matches<span class="caret"></span></a>
                                     <ul class="dropdown-menu" role="menu">
@@ -102,7 +101,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         <li><a href="upgrade.html">Upgrade</a></li>
                                     </ul>
                                 </li>
-                                <li class="last"><a href="contact.html">Contacts</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="contact.html">Contacts</a></li>
+                                <li class="last" style="display:@Session["IsLogin"]"><a href="../../Login/">Login</a></li>
+                                <li class="last" style="display:@Session["IsLogout"]"><a href="../../Logout/">Logout</a></li>
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </nav>

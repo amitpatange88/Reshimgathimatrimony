@@ -13,6 +13,7 @@
             <div class="col-sm-6 login_left">
                 @using (Html.BeginForm("Index", "Login", FormMethod.Post))
                 {
+                    @Html.AntiForgeryToken();
                     <div class="form-item form-type-textfield form-item-name">
                         <label for="edit-name">Username <span class="form-required" title="This field is required.">*</span></label>
                         <input type="text" id="UserName" name="UserName" value="" size="60" maxlength="60" class="form-text required">

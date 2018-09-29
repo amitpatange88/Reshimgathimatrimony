@@ -10,11 +10,12 @@ namespace ReshimgathiMatrimony.Controllers
     public class LoginController : Controller
     {
         public ActionResult Index()
-        {   
+        {
             return View(); 
         }
 
-        [HttpPost]//[ValidateAntiForgeryToken]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Index(ReshimgathiMatrimony.Models.Login model)
         {
             if (ModelState.IsValid)
@@ -27,6 +28,8 @@ namespace ReshimgathiMatrimony.Controllers
                     bool IsVerified = loginOp.IsLogInUserVerified(model.UserName, model.Password);
                     if(IsVerified)
                     {
+                        //SessionManagerController.Instance.SetSession();
+                        SetSession();
                         UserType type = loginOp.LoggedUserType(model.UserName, model.Password);
                         if(type == UserType.User)
                         {
@@ -46,14 +49,24 @@ namespace ReshimgathiMatrimony.Controllers
                 }
                 else
                 {
+                    //default Index Get view with ErrorMessage. Username and password are wrong.
                     ModelState.AddModelError(string.Empty, "Username or password are not correct. Please try again with the correct details.");
-                    //default Index Get view with ErrorMessage
-                    //Username and password are wrong.
                 }
             }
 
             return View();
         }
-        
+
+        public void SetSession()
+        {
+            Session["SessionId"] = GetSession();
+            Session["IsLogin"] = "none";
+            Session["IsLogout"] = "block";
+        }
+
+        public string GetSession()
+        {
+            return Session.SessionID.ToString();
+        }
     }
 }
