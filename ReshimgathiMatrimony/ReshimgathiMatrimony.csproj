@@ -201,7 +201,11 @@
       <DependentUpon>ReshimgathiMatrimony.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\LoginOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrationPhase1.cs">
+      <DependentUpon>ReshimgathiMatrimony.tt</DependentUpon>
+    </Compile>
     <Compile Include="ReshimgathiMatrimony.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

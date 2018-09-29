@@ -18,6 +18,8 @@ namespace ReshimgathiMatrimony
         public ReshimgathiMatrimonyEntities()
             : base("name=ReshimgathiMatrimonyEntities")
         {
+            //Disable initializer
+            Database.SetInitializer<ReshimgathiMatrimonyEntities>(null);
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -28,5 +30,6 @@ namespace ReshimgathiMatrimony
         public virtual DbSet<AppConstant> AppConstants { get; set; }
         public virtual DbSet<LoginEvent> LoginEvents { get; set; }
         public virtual DbSet<Login> Logins { get; set; }
+        public virtual DbSet<RegistrationPhase1> RegistrationPhase1 { get; set; }
     }
 }

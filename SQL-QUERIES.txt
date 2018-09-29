@@ -29,8 +29,10 @@ INSERT INTO Login VALUES (default, 'amit', 'amit', 0, 0, CURRENT_TIMESTAMP, CURR
 
 ----------------------------------------------
 
-CREATE TABLE InitialRegistration (
-    Id UNIQUEIDENTIFIER,
+CREATE TABLE RegistrationPhase1 (
+    Id UNIQUEIDENTIFIER PRIMARY KEY default NEWID(),
+    LoginId Uniqueidentifier,
+    ReshimgathiId varchar(255),
     FirstName varchar(255),
 	LastName varchar(255),
 	PhoneNumber varchar(25),
@@ -41,7 +43,10 @@ CREATE TABLE InitialRegistration (
 	UpdatedDate datetime DEFAULT CURRENT_TIMESTAMP
 );
 
-INSERT INTO InitialRegistration VALUES (default, 'Amit', 'Patange', '7709981177', 0, 'amitpatange88@gmail.com', 0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+
+INSERT INTO RegistrationPhase1 VALUES (default, '97071193-C9A6-4897-B5DC-C7D812CDBA66', 'RM-000000', 'Amit', 'Patange', '7709981177', 0, 'amitpatange88@gmail.com', 0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+
+
 
 ------------------------------------
 

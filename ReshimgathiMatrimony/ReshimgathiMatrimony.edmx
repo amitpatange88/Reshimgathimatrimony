@@ -13,19 +13,6 @@
           <Property Name="Constant" Type="varchar" MaxLength="255" />
           <Property Name="Value" Type="varchar" MaxLength="255" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'ReshimgathiMatrimony.dbo.InitialRegistration' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="InitialRegistration">
-          <Property Name="Id" Type="uniqueidentifier" />
-          <Property Name="FirstName" Type="varchar" MaxLength="255" />
-          <Property Name="LastName" Type="varchar" MaxLength="255" />
-          <Property Name="PhoneNumber" Type="varchar" MaxLength="25" />
-          <Property Name="IsPhoneVerified" Type="bit" />
-          <Property Name="EmailId" Type="varchar" MaxLength="255" />
-          <Property Name="IsEmailVerified" Type="bit" />
-          <Property Name="CreateDate" Type="datetime" />
-          <Property Name="UpdatedDate" Type="datetime" />
-        </EntityType>-->
         <EntityType Name="Login">
           <Key>
             <PropertyRef Name="Id" />
@@ -50,10 +37,27 @@ warning 6013: The table/view 'ReshimgathiMatrimony.dbo.InitialRegistration' does
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdatedDate" Type="datetime" />
         </EntityType>
+        <EntityType Name="RegistrationPhase1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LoginId" Type="uniqueidentifier" />
+          <Property Name="ReshimgathiId" Type="varchar" MaxLength="255" />
+          <Property Name="FirstName" Type="varchar" MaxLength="255" />
+          <Property Name="LastName" Type="varchar" MaxLength="255" />
+          <Property Name="PhoneNumber" Type="varchar" MaxLength="25" />
+          <Property Name="IsPhoneVerified" Type="bit" />
+          <Property Name="EmailId" Type="varchar" MaxLength="255" />
+          <Property Name="IsEmailVerified" Type="bit" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="UpdatedDate" Type="datetime" />
+        </EntityType>
         <EntityContainer Name="ReshimgathiMatrimonyModelStoreContainer">
           <EntitySet Name="AppConstants" EntityType="Self.AppConstants" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoginEvents" EntityType="Self.LoginEvents" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RegistrationPhase1" EntityType="Self.RegistrationPhase1" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -71,6 +75,7 @@ warning 6013: The table/view 'ReshimgathiMatrimony.dbo.InitialRegistration' does
           <EntitySet Name="AppConstants" EntityType="Self.AppConstant" />
           <EntitySet Name="LoginEvents" EntityType="ReshimgathiMatrimonyModel.LoginEvent" />
           <EntitySet Name="Logins" EntityType="ReshimgathiMatrimonyModel.Login" />
+          <EntitySet Name="RegistrationPhase1" EntityType="ReshimgathiMatrimonyModel.RegistrationPhase1" />
         </EntityContainer>
         <EntityType Name="LoginEvent">
           <Key>
@@ -93,6 +98,22 @@ warning 6013: The table/view 'ReshimgathiMatrimony.dbo.InitialRegistration' does
           <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="UserType" Type="Boolean" />
           <Property Name="IsVerified" Type="Boolean" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="RegistrationPhase1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="LoginId" Type="Guid" />
+          <Property Name="ReshimgathiId" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="IsPhoneVerified" Type="Boolean" />
+          <Property Name="EmailId" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="IsEmailVerified" Type="Boolean" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
         </EntityType>
@@ -133,6 +154,23 @@ warning 6013: The table/view 'ReshimgathiMatrimony.dbo.InitialRegistration' does
                 <ScalarProperty Name="UserType" ColumnName="UserType" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RegistrationPhase1">
+            <EntityTypeMapping TypeName="ReshimgathiMatrimonyModel.RegistrationPhase1">
+              <MappingFragment StoreEntitySet="RegistrationPhase1">
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="IsEmailVerified" ColumnName="IsEmailVerified" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="IsPhoneVerified" ColumnName="IsPhoneVerified" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="ReshimgathiId" ColumnName="ReshimgathiId" />
+                <ScalarProperty Name="LoginId" ColumnName="LoginId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

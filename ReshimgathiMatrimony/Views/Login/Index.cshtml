@@ -1,4 +1,6 @@
-﻿<div class="grid_3">
+﻿@model Login
+
+<div class="grid_3">
     <div class="container">
         <div class="breadcrumb1">
             <ul>
@@ -14,14 +16,17 @@
                     <div class="form-item form-type-textfield form-item-name">
                         <label for="edit-name">Username <span class="form-required" title="This field is required.">*</span></label>
                         <input type="text" id="UserName" name="UserName" value="" size="60" maxlength="60" class="form-text required">
+                        @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
                     </div>
                     <div class="form-item form-type-password form-item-pass">
                         <label for="edit-pass">Password <span class="form-required" title="This field is required.">*</span></label>
                         <input type="password" id="Password" name="Password" size="60" maxlength="128" class="form-text required">
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                     </div>
                     <div class="form-actions">
                         <input type="submit" id="edit-submit" name="op" value="Log in" class="btn_1 submit">
                     </div>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 }
             </div>
             <div class="col-sm-6">
