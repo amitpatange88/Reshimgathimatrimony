@@ -9,9 +9,25 @@ namespace ReshimgathiMatrimony.Controllers
 {
     public class LoginController : Controller
     {
+        private static Guid UserLoginId = Guid.Empty;
+        private static bool? BaseUserType;
+
         public ActionResult Index()
         {
-            return View(); 
+            if (!string.IsNullOrEmpty(Session["SessionId"].ToString()))
+            {
+                if (BaseUserType == false)
+                {
+                    return RedirectToAction("Index", "Dashboard");
+                }
+                else if(BaseUserType == true)
+                {
+                    //Admin user goes here.
+                    return RedirectToAction("Index", "Admin");
+                }
+            }
+
+                return View(); 
         }
 
         [HttpPost]
@@ -26,12 +42,15 @@ namespace ReshimgathiMatrimony.Controllers
                 if (loginStatus)
                 {
                     bool IsVerified = loginOp.IsLogInUserVerified(model.UserName, model.Password);
-                    if(IsVerified)
+                    if (IsVerified)
                     {
-                        //SessionManagerController.Instance.SetSession();
-                        SetSession();
                         UserType type = loginOp.LoggedUserType(model.UserName, model.Password);
-                        if(type == UserType.User)
+                        var userDetails = loginOp.GetUserDetails(model.UserName, model.Password);
+                        UserLoginId = userDetails.Id;
+                        BaseUserType = userDetails.UserType;
+                        SetSession();
+
+                        if (type == UserType.User)
                         {
                             return RedirectToAction("Index", "Dashboard");
                         }
@@ -62,6 +81,8 @@ namespace ReshimgathiMatrimony.Controllers
             Session["SessionId"] = GetSession();
             Session["IsLogin"] = "none";
             Session["IsLogout"] = "block";
+            Session["LoginId"] = UserLoginId;
+            Session["UserType"] = BaseUserType;
         }
 
         public string GetSession()

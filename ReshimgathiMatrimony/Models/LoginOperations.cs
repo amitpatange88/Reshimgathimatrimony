@@ -55,5 +55,15 @@ namespace ReshimgathiMatrimony.Models
                 }
             }
         }
+
+        public ReshimgathiMatrimony.Login GetUserDetails(string UserName, string Password)
+        {
+            using (ReshimgathiMatrimonyEntities db = new ReshimgathiMatrimonyEntities())
+            {
+                var userDetails = db.Logins.Where(x => x.UserName == UserName && x.Password == Password).FirstOrDefault();
+
+                return userDetails;
+            }
+        }
     }
 }

@@ -10,10 +10,24 @@ namespace ReshimgathiMatrimony.Controllers
     {
         public ActionResult Index()
         {
-            //SessionManagerController.Instance.InitializeSession();
-            
+            InitializeSession();
             ViewBag.Title = "Home Page";
             return View(); 
+        }
+
+        public void ClearSession()
+        {
+            Session["IsLogin"] = "block";
+            Session["IsLogout"] = "none";
+            Session["SessionId"] = string.Empty;
+        }
+
+        public void InitializeSession()
+        {
+            if(Session["SessionId"] == null)
+            {
+                ClearSession();
+            }
         }
     }
 }

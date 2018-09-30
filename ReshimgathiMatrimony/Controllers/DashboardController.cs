@@ -12,8 +12,12 @@ namespace ReshimgathiMatrimony.Controllers
     {
         public ActionResult Index()
         {
-            //SessionManagerController.Instance.InitializeSession();
-            return View(); 
+            if (string.IsNullOrEmpty(Session["SessionId"].ToString()))
+            {
+                return RedirectToAction("Index", "Login");
+            }
+
+            return View();
         }
     }
 }
