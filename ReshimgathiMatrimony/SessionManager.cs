@@ -11,19 +11,6 @@ namespace ReshimgathiMatrimony
     {
         private static SessionManager instance = null;
         private static readonly object obj = new object();
-        private static HttpContextBase _context = null;
-
-        public static HttpContextBase Context
-        {
-            get
-            {
-                return _context;
-            }
-            set
-            {
-                _context = value;
-            }
-        }
 
         public static SessionManager Instance
         {
@@ -52,25 +39,6 @@ namespace ReshimgathiMatrimony
             string SessionId =sessionValue.SessionID.ToString();
 
             return SessionId;
-        }
-
-        public void SetSession()
-        {
-            _context.Session["SessionId"] = GetSession();
-            _context.Session["IsLogin"] = "none";
-            _context.Session["IsLogout"] = "block";
-        }
-
-        public void ClearSession()
-        {
-            _context.Session["IsLogin"] = "block";
-            _context.Session["IsLogout"] = "none";
-            _context.Session["SessionId"] = string.Empty;
-        }
-
-        public void SetSessionVariable(string key, string value)
-        {
-            _context.Session[key] = value;
         }
     }
 }

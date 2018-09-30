@@ -191,6 +191,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LogoutController.cs" />
+    <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Controllers\SessionManagerController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -204,10 +205,13 @@
     </Compile>
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\LoginOperations.cs" />
+    <Compile Include="Models\Registration.cs" />
+    <Compile Include="Models\RegistrationOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrationPhase1.cs">
       <DependentUpon>ReshimgathiMatrimony.tt</DependentUpon>
     </Compile>
+    <Compile Include="Reshimgathi.cs" />
     <Compile Include="ReshimgathiMatrimony.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -359,6 +363,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Registration\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -20,14 +20,14 @@ namespace ReshimgathiMatrimony.Controllers
                 {
                     return RedirectToAction("Index", "Dashboard");
                 }
-                else if(BaseUserType == true)
+                else if (BaseUserType == true)
                 {
                     //Admin user goes here.
                     return RedirectToAction("Index", "Admin");
                 }
             }
 
-                return View(); 
+            return View(); 
         }
 
         [HttpPost]

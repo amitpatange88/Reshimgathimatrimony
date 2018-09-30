@@ -1,0 +1,65 @@
+﻿@model ReshimgathiMatrimony.Models.Registration
+
+<div class="grid_3">
+    <div class="container">
+        <div class="breadcrumb1">
+            <ul>
+                <a href="index.html"><i class="fa fa-home home_1"></i></a>
+                <span class="divider">&nbsp;|&nbsp;</span>
+                <li class="current-page">Registration</li>
+            </ul>
+        </div>
+        <div class="services">
+            <div class="col-sm-6 login_left">
+                @using (Html.BeginForm("Index", "Registration", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken();
+                    <div class="form-item form-type-textfield form-item-name">
+                        <label for="edit-name">FirstName <span class="form-required" title="This field is required.">*</span></label>
+                        <input type="text" id="FirstName" name="FirstName" value="" size="60" maxlength="60" class="form-text required">
+                        @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-item form-type-password form-item-pass">
+                        <label for="edit-pass">Last Name <span class="form-required" title="This field is required.">*</span></label>
+                        <input type="text" id="LastName" name="LastName" size="60" maxlength="128" class="form-text required">
+                        @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-item form-type-password form-item-pass">
+                        <label for="edit-pass">UserName <span class="form-required" title="This field is required.">*</span></label>
+                        <input type="text" id="UserName" name="UserName" size="60" maxlength="128" class="form-text required">
+                        @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-item form-type-password form-item-pass">
+                        <label for="edit-pass">Password <span class="form-required" title="This field is required.">*</span></label>
+                        <input type="password" id="Password" name="Password" size="60" maxlength="128" class="form-text required">
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-item form-type-password form-item-pass">
+                        <label for="edit-pass">Email Id <span class="form-required" title="This field is required.">*</span></label>
+                        <input type="text" id="EmailId" name="EmailId" size="60" maxlength="128" class="form-text required">
+                        @Html.ValidationMessageFor(m => m.EmailId, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-item form-type-password form-item-pass">
+                        <label for="edit-pass">Phone No <span class="form-required" title="This field is required.">*</span></label>
+                        <input type="text" id="PhoneNumber" name="PhoneNumber" size="60" maxlength="128" class="form-text required">
+                        @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-actions">
+                        <input type="submit" id="edit-submit" name="op" value="Sign-up" class="btn_1 submit">
+                    </div>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                }
+            </div>
+            <div class="col-sm-6">
+                <ul class="sharing">
+                    <li><a href="#" class="facebook" title="Facebook"><i class="fa fa-boxed fa-fw fa-facebook"></i> Share on Facebook</a></li>
+                    <li><a href="#" class="twitter" title="Twitter"><i class="fa fa-boxed fa-fw fa-twitter"></i> Tweet</a></li>
+                    <li><a href="#" class="google" title="Google"><i class="fa fa-boxed fa-fw fa-google-plus"></i> Share on Google+</a></li>
+                    <li><a href="#" class="linkedin" title="Linkedin"><i class="fa fa-boxed fa-fw fa-linkedin"></i> Share on LinkedIn</a></li>
+                    <li><a href="#" class="mail" title="Email"><i class="fa fa-boxed fa-fw fa-envelope-o"></i> E-mail</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
