@@ -16,7 +16,7 @@
                     @Html.AntiForgeryToken();
                     <div class="form-item form-type-textfield form-item-name">
                         <label for="edit-name">Username <span class="form-required" title="This field is required.">*</span></label>
-                        <input type="text" id="UserName" name="UserName" value="" size="60" maxlength="60" class="form-text required">
+                        <input type="text" id="UserName" name="UserName" value="@Model.UserName" size="60" maxlength="60" class="form-text required">
                         @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
                     </div>
                     <div class="form-item form-type-password form-it

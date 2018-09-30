@@ -12,7 +12,10 @@ namespace ReshimgathiMatrimony.Controllers
         // GET: Registration
         public ActionResult Index()
         {
-            return View();
+            Registration model = new Registration();
+
+            InitializeSession();
+            return View(model);
         }
 
         // Post: Registration
@@ -51,7 +54,22 @@ namespace ReshimgathiMatrimony.Controllers
                 }
             }
 
-            return View();
+            return View(model);
+        }
+
+        public void ClearSession()
+        {
+            Session["IsLogin"] = "block";
+            Session["IsLogout"] = "none";
+            Session["SessionId"] = string.Empty;
+        }
+
+        public void InitializeSession()
+        {
+            if (Session["SessionId"] == null)
+            {
+                ClearSession();
+            }
         }
     }
 }

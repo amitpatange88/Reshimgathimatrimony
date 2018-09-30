@@ -14,6 +14,8 @@ namespace ReshimgathiMatrimony.Controllers
 
         public ActionResult Index()
         {
+            ReshimgathiMatrimony.Models.Login model = new ReshimgathiMatrimony.Models.Login();
+
             if (!string.IsNullOrEmpty(Session["SessionId"].ToString()))
             {
                 if (BaseUserType == false)
@@ -27,7 +29,7 @@ namespace ReshimgathiMatrimony.Controllers
                 }
             }
 
-            return View(); 
+            return View(model); 
         }
 
         [HttpPost]
@@ -73,7 +75,7 @@ namespace ReshimgathiMatrimony.Controllers
                 }
             }
 
-            return View();
+            return View(model);
         }
 
         public void SetSession()
