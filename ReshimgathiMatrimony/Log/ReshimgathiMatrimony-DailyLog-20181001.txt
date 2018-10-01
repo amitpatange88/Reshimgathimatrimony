@@ -1,2 +1,4 @@
 {"DateTime":"10/1/2018 10:18:41 PM","NameSpace":"ReshimgathiMatrimony.Controllers.LoginController","Exception":"Manual exception thrown.","ErrorCode":"-2146233088"}
 {"DateTime":"10/1/2018 10:21:25 PM","NameSpace":"ReshimgathiMatrimony.Controllers.LoginController","Exception":"Manual exception thrown.","ErrorCode":"-2146233088"}
+{"DateTime":"10/1/2018 11:40:45 PM","NameSpace":"ReshimgathiMatrimony.Controllers.LoginController","Exception":"Object reference not set to an instance of an object.","ErrorCode":"-2147467261"}
+{"DateTime":"10/1/2018 11:42:19 PM","NameSpace":"ReshimgathiMatrimony.Controllers.LoginController","Exception":"Manual exception thrown.","ErrorCode":"-2146233088"}

@@ -5,6 +5,7 @@ using System.Web;
 
 namespace ReshimgathiMatrimony.Models
 {
+    [SnatchException]
     public class LoginOperations
     {
         public Guid Add(ReshimgathiMatrimony.Models.Login data)
@@ -33,6 +34,7 @@ namespace ReshimgathiMatrimony.Models
 
         public bool IsLoggedUserPresent(string UserName, string Password)
         {
+            throw new Exception("Manual exception thrown.");
             using (ReshimgathiMatrimonyEntities db = new ReshimgathiMatrimonyEntities())
             {
                 var IsUSerPresent = db.Logins.Where(x => x.UserName == UserName && x.Password == Password).FirstOrDefault();
