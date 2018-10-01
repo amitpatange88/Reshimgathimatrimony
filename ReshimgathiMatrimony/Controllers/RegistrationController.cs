@@ -7,9 +7,11 @@ using System.Web.Mvc;
 
 namespace ReshimgathiMatrimony.Controllers
 {
+    [SnatchException]
     public class RegistrationController : Controller
     {
         // GET: Registration
+
         public ActionResult Index()
         {
             Registration model = new Registration();

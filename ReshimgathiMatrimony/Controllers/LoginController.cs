@@ -7,6 +7,8 @@ using ReshimgathiMatrimony.Models;
 
 namespace ReshimgathiMatrimony.Controllers
 {
+    [SnatchException]
+    [HandleError]
     public class LoginController : Controller
     {
         private static Guid UserLoginId = Guid.Empty;
@@ -36,6 +38,7 @@ namespace ReshimgathiMatrimony.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Index(ReshimgathiMatrimony.Models.Login model)
         {
+            throw new Exception("Manual exception thrown.");
             if (ModelState.IsValid)
             {
                 LoginOperations loginOp = new LoginOperations();

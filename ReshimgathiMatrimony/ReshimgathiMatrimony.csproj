@@ -194,6 +194,7 @@
     <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Controllers\SessionManagerController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="FileUtility.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -228,6 +229,7 @@
       <DependentUpon>ReshimgathiMatrimony.edmx</DependentUpon>
     </Compile>
     <Compile Include="SessionManager.cs" />
+    <Compile Include="SnatchException.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
