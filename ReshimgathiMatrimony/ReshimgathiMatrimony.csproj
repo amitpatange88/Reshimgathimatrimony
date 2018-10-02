@@ -188,6 +188,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\LoginApiController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LogoutController.cs" />
