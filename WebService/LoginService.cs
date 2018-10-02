@@ -8,7 +8,7 @@ namespace WebService
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "LoginService" in both code and config file together.
     public class LoginService : ILoginService
     {
-        public bool CheckIfUserExist(string username, string password)
+        public bool IsLoggedUserPresent(string username, string password)
         {
             bool IsUserExist = false;
             LoginOperations loginOp = new LoginOperations();
@@ -17,7 +17,7 @@ namespace WebService
             return IsUserExist;
         }
 
-        public bool CheckIfUserAuthenticated(string userName, string password)
+        public bool IsLogInUserVerified(string userName, string password)
         {
             bool IsUserAuthenticated = false;
             LoginOperations loginOp = new LoginOperations();
@@ -26,14 +26,13 @@ namespace WebService
             return IsUserAuthenticated;
         }
 
-        public List<UserDetails> ValidateUserForLogin(string userName, string password)
+        public UserDetails GetUserDetails(string userName, string password)
         {
             bool IsDone = false;
-            List<UserDetails> user = new List<UserDetails>();
             UserDetails cust = new UserDetails();
 
-            if (CheckIfUserExist(userName, password))
-                if (CheckIfUserAuthenticated(userName, password))
+            if (IsLoggedUserPresent(userName, password))
+                if (IsLogInUserVerified(userName, password))
                     IsDone = true;
 
             if (IsDone)
@@ -48,12 +47,15 @@ namespace WebService
                 cust.CreateDate = result.CreateDate;
                 cust.UpdatedDate = result.UpdatedDate;
             }
-            else
-            {
-                user.Add(cust);
-            }
 
-            return user;
+            return cust;
+        }
+
+        public UserType LoggedUserType(string userName, string Password)
+        {
+            LoginOperations loginOp = new LoginOperations();
+
+            return loginOp.LoggedUserType(userName, Password);
         }
     }
 }

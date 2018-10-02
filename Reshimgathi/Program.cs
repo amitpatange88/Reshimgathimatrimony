@@ -17,8 +17,6 @@ namespace Reshimgathi
                 Console.WriteLine("Host started @" + DateTime.Now.ToString());
                 Console.ReadLine();
             }
-
-            
         }
     }
 }

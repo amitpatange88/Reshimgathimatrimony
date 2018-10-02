@@ -96,7 +96,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_ILoginService_CheckIfUserExist_Input_policy">
+  <wsp:Policy wsu:Id="WSHttpBinding_ILoginService_IsLoggedUserPresent_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -115,7 +115,121 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_ILoginService_CheckIfUserExist_output_policy">
+  <wsp:Policy wsu:Id="WSHttpBinding_ILoginService_IsLoggedUserPresent_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ILoginService_IsLogInUserVerified_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ILoginService_IsLogInUserVerified_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ILoginService_GetUserDetails_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ILoginService_GetUserDetails_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ILoginService_LoggedUserType_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ILoginService_LoggedUserType_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -167,31 +281,95 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ReshimgathiMatrimony" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="ILoginService_CheckIfUserExist_InputMessage">
-    <wsdl:part name="parameters" element="tns:CheckIfUserExist" />
+  <wsdl:message name="ILoginService_IsLoggedUserPresent_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsLoggedUserPresent" />
   </wsdl:message>
-  <wsdl:message name="ILoginService_CheckIfUserExist_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CheckIfUserExistResponse" />
+  <wsdl:message name="ILoginService_IsLoggedUserPresent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsLoggedUserPresentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILoginService_IsLogInUserVerified_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsLogInUserVerified" />
+  </wsdl:message>
+  <wsdl:message name="ILoginService_IsLogInUserVerified_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsLogInUserVerifiedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILoginService_GetUserDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDetails" />
+  </wsdl:message>
+  <wsdl:message name="ILoginService_GetUserDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILoginService_LoggedUserType_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoggedUserType" />
+  </wsdl:message>
+  <wsdl:message name="ILoginService_LoggedUserType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoggedUserTypeResponse" />
   </wsdl:message>
   <wsdl:portType name="ILoginService">
-    <wsdl:operation name="CheckIfUserExist">
-      <wsdl:input wsaw:Action="http://tempuri.org/ILoginService/CheckIfUserExist" message="tns:ILoginService_CheckIfUserExist_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ILoginService/CheckIfUserExistResponse" message="tns:ILoginService_CheckIfUserExist_OutputMessage" />
+    <wsdl:operation name="IsLoggedUserPresent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoginService/IsLoggedUserPresent" message="tns:ILoginService_IsLoggedUserPresent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoginService/IsLoggedUserPresentResponse" message="tns:ILoginService_IsLoggedUserPresent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsLogInUserVerified">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoginService/IsLogInUserVerified" message="tns:ILoginService_IsLogInUserVerified_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoginService/IsLogInUserVerifiedResponse" message="tns:ILoginService_IsLogInUserVerified_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoginService/GetUserDetails" message="tns:ILoginService_GetUserDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoginService/GetUserDetailsResponse" message="tns:ILoginService_GetUserDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoggedUserType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoginService/LoggedUserType" message="tns:ILoginService_LoggedUserType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoginService/LoggedUserTypeResponse" message="tns:ILoginService_LoggedUserType_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WSHttpBinding_ILoginService" type="tns:ILoginService">
     <wsp:PolicyReference URI="#WSHttpBinding_ILoginService_policy" />
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="CheckIfUserExist">
-      <soap12:operation soapAction="http://tempuri.org/ILoginService/CheckIfUserExist" style="document" />
+    <wsdl:operation name="IsLoggedUserPresent">
+      <soap12:operation soapAction="http://tempuri.org/ILoginService/IsLoggedUserPresent" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSHttpBinding_ILoginService_CheckIfUserExist_Input_policy" />
+        <wsp:PolicyReference URI="#WSHttpBinding_ILoginService_IsLoggedUserPresent_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSHttpBinding_ILoginService_CheckIfUserExist_output_policy" />
+        <wsp:PolicyReference URI="#WSHttpBinding_ILoginService_IsLoggedUserPresent_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsLogInUserVerified">
+      <soap12:operation soapAction="http://tempuri.org/ILoginService/IsLogInUserVerified" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#WSHttpBinding_ILoginService_IsLogInUserVerified_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#WSHttpBinding_ILoginService_IsLogInUserVerified_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetails">
+      <soap12:operation soapAction="http://tempuri.org/ILoginService/GetUserDetails" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#WSHttpBinding_ILoginService_GetUserDetails_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#WSHttpBinding_ILoginService_GetUserDetails_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoggedUserType">
+      <soap12:operation soapAction="http://tempuri.org/ILoginService/LoggedUserType" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#WSHttpBinding_ILoginService_LoggedUserType_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#WSHttpBinding_ILoginService_LoggedUserType_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
@@ -199,8 +377,35 @@
   <wsdl:binding name="NetTcpBinding_ILoginService" type="tns:ILoginService">
     <wsp:PolicyReference URI="#NetTcpBinding_ILoginService_policy" />
     <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
-    <wsdl:operation name="CheckIfUserExist">
-      <soap12:operation soapAction="http://tempuri.org/ILoginService/CheckIfUserExist" style="document" />
+    <wsdl:operation name="IsLoggedUserPresent">
+      <soap12:operation soapAction="http://tempuri.org/ILoginService/IsLoggedUserPresent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsLogInUserVerified">
+      <soap12:operation soapAction="http://tempuri.org/ILoginService/IsLogInUserVerified" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetails">
+      <soap12:operation soapAction="http://tempuri.org/ILoginService/GetUserDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoggedUserType">
+      <soap12:operation soapAction="http://tempuri.org/ILoginService/LoggedUserType" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

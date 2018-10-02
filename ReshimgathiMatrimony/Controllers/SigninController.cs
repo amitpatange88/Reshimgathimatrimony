@@ -38,24 +38,25 @@ namespace ReshimgathiMatrimony.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Index(ReshimgathiMatrimony.Models.Login model)
         {
-            //throw new Exception("Manual exception thrown.");
             if (ModelState.IsValid)
             {
+                //LoginOperations loginOp = new LoginOperations();
                 LoginServices.LoginServiceClient client = new LoginServices.LoginServiceClient("WSHttpBinding_ILoginService");
 
-                bool loginStatus = client.CheckIfUserExist(model.UserName, model.Password);
-
-                LoginOperations loginOp = new LoginOperations();
+                bool loginStatus = client.IsLoggedUserPresent(model.UserName, model.Password);
                 //bool loginStatus = loginOp.IsLoggedUserPresent(model.UserName, model.Password);
 
                 if (loginStatus)
                 {
                     //WCF service call.
-                    bool IsVerified = loginOp.IsLogInUserVerified(model.UserName, model.Password);
+                    //bool IsVerified = loginOp.IsLogInUserVerified(model.UserName, model.Password);
+                    bool IsVerified = client.IsLogInUserVerified(model.UserName, model.Password);
+
                     if (IsVerified)
                     {
-                        UserType type = loginOp.LoggedUserType(model.UserName, model.Password);
-                        var userDetails = loginOp.GetUserDetails(model.UserName, model.Password);
+                        UserType type = (UserType)client.LoggedUserType(model.UserName, model.Password);
+                        var userDetails = client.GetUserDetails(model.UserName, model.Password);
+
                         UserLoginId = userDetails.Id;
                         BaseUserType = userDetails.UserType;
                         SetSession();

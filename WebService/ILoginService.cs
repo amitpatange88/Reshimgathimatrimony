@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReshimgathiMatrimony;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -12,6 +13,15 @@ namespace WebService
     public interface ILoginService
     {
         [OperationContract]
-        bool CheckIfUserExist(string username, string password);
+        bool IsLoggedUserPresent(string username, string password);
+
+        [OperationContract]
+        bool IsLogInUserVerified(string userName, string password);
+
+        [OperationContract]
+        UserDetails GetUserDetails(string userName, string password);
+
+        [OperationContract]
+        UserType LoggedUserType(string userName, string Password);
     }
 }

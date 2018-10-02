@@ -245,6 +245,9 @@
     <None Include="Connected Services\LoginServices\item.disco" />
     <None Include="Connected Services\LoginServices\configuration91.svcinfo" />
     <None Include="Connected Services\LoginServices\configuration.svcinfo" />
+    <None Include="Connected Services\LoginServices\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\LoginServices\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -363,6 +366,12 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\LoginServices\LoginService.wsdl" />
+    <Content Include="Connected Services\LoginServices\ReshimgathiMatrimony.LoginServices.UserDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\LoginServices\ReshimgathiMatrimony.LoginServices.UserType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
