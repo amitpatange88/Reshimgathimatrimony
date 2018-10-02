@@ -40,8 +40,8 @@ namespace ReshimgathiMatrimony.Controllers
         public HttpResponseMessage ValidateUserForLogin(string userName, string password)
         {
             bool IsDone = false;
-            List<Customer> user = new List<Customer>();
-            Customer cust = new Customer();
+            List<UserDetails> user = new List<UserDetails>();
+            UserDetails cust = new UserDetails();
 
             if (CheckIfUserExist(userName, password))
                 if (CheckIfUserAuthenticated(userName, password))
@@ -66,29 +66,5 @@ namespace ReshimgathiMatrimony.Controllers
 
             return Request.CreateResponse(HttpStatusCode.OK, JsonConvert.SerializeObject(user));
         }
-    }
-
-    /// <summary>
-    /// Customer class
-    /// </summary>
-    public class Customer
-    {
-        [JsonProperty("LoginId")]
-        public System.Guid Id { get; set; }
-
-        [JsonProperty("UserName")]
-        public string UserName { get; set; }
-
-        [JsonProperty("UserType")]
-        public Nullable<bool> UserType { get; set; }
-
-        [JsonProperty("IsVerified")]
-        public Nullable<bool> IsVerified { get; set; }
-
-        [JsonProperty("CreateDate")]
-        public Nullable<System.DateTime> CreateDate { get; set; }
-
-        [JsonProperty("UpdatedDate")]
-        public Nullable<System.DateTime> UpdatedDate { get; set; }
     }
 }
