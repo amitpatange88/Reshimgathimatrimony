@@ -41,7 +41,12 @@ namespace ReshimgathiMatrimony.Controllers
             if (ModelState.IsValid)
             {
                 //LoginOperations loginOp = new LoginOperations();
+
+                //use this WSHttpBinding_ILoginService for http protocol communication 
                 LoginServices.LoginServiceClient client = new LoginServices.LoginServiceClient("WSHttpBinding_ILoginService");
+
+                //use this NetTcpBinding_ILoginService when we want communication should be carried out through TCP protocol.
+                //LoginServices.LoginServiceClient client = new LoginServices.LoginServiceClient("NetTcpBinding_ILoginService");
 
                 bool loginStatus = client.IsLoggedUserPresent(model.UserName, model.Password);
                 //bool loginStatus = loginOp.IsLoggedUserPresent(model.UserName, model.Password);
