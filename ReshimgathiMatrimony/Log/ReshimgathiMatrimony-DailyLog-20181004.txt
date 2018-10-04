@@ -1,0 +1,1 @@
+{"DateTime":"10/4/2018 5:47:10 PM","NameSpace":"ReshimgathiMatrimony.Controllers.LoginController","Exception":"Manual exception thrown.","ErrorCode":"-2146233088"}

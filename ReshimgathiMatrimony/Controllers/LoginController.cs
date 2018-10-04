@@ -38,7 +38,7 @@ namespace ReshimgathiMatrimony.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Index(ReshimgathiMatrimony.Models.Login model)
         {
-            //throw new Exception("Manual exception thrown.");
+            throw new Exception("Manual exception thrown.");
             if (ModelState.IsValid)
             {
                 LoginOperations loginOp = new LoginOperations();
