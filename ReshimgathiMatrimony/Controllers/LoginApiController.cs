@@ -13,7 +13,7 @@ namespace ReshimgathiMatrimony.Controllers
     [SnatchException]
     public class LoginApiController : ApiController
     {
-        [Route("userexistance")]
+        [Route("IsLoggedUserPresent")]
         [HttpPost]
         public bool CheckIfUserExist(string userName, string password)
         {
@@ -24,7 +24,7 @@ namespace ReshimgathiMatrimony.Controllers
             return IsUserExist;
         }
 
-        [Route("userauthenticated")]
+        [Route("IsLogInUserVerified")]
         [HttpPost]
         public bool CheckIfUserAuthenticated(string userName, string password)
         {
@@ -35,9 +35,9 @@ namespace ReshimgathiMatrimony.Controllers
             return IsUserAuthenticated;
         }
 
-        [Route("check")]
+        [Route("GetUserDetails")]
         [HttpPost]
-        public HttpResponseMessage ValidateUserForLogin(string userName, string password)
+        public HttpResponseMessage GetUserDetails(string userName, string password)
         {
             bool IsDone = false;
             List<UserDetails> user = new List<UserDetails>();
