@@ -34,6 +34,12 @@ namespace ReshimgathiMatrimony.Controllers
             return View(model);
         }
 
+        /// <summary>
+        /// This login post index action being called when we submit the form data for login action.
+        /// Here we use the WCF services hosted either by self hosting tech or windows services.
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Index(ReshimgathiMatrimony.Models.Login model)
