@@ -61,3 +61,28 @@ CREATE TABLE LoginEvents (
 );
 
 
+
+
+========================
+
+CREATE FUNCTION dbo.GetLoginDetails ()
+RETURNS TABLE
+AS RETURN 
+	SELECT Id, UserName, Password, UserType, IsVerified, CreateDate, UpdatedDate 
+		FROM Login
+
+
+CREATE PROCEDURE dbo.GetLoginDetailsProc @input VARCHAR(250) = NULL
+AS
+SELECT * FROM GetLoginDetails()
+
+
+drop function GetLoginDetails
+drop procedure GetLoginDetailsProc
+
+	GetLoginDetails 'amit'
+
+
+	SELECT * FROM GetLoginDetails('amit')
+
+	exec GetLoginDetailsProc 'amit'
