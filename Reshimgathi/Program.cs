@@ -11,12 +11,18 @@ namespace Reshimgathi
     {
         static void Main(string[] args)
         {
-            using (ServiceHost host = new ServiceHost(typeof(WebService.LoginService)))
-            {
-                host.Open();
-                Console.WriteLine("Host started @" + DateTime.Now.ToString());
-                Console.ReadLine();
-            }
+            ServiceHost loginService = new ServiceHost(typeof(WebService.LoginService));
+            loginService.Open();
+            Console.WriteLine("Login Host started @" + DateTime.Now.ToString());
+
+            ServiceHost registrationPhaseIService = new ServiceHost(typeof(WebService.RegistrationPhaseI));
+            registrationPhaseIService.Open();
+            Console.WriteLine("Registration Host started @" + DateTime.Now.ToString());
+
+
+            //Close function used to close the opened webservice connection.
+            //loginService.Close();   registrationPhaseIService.Close();
+            Console.ReadLine();
         }
     }
 }

@@ -51,6 +51,12 @@ namespace ReshimgathiMatrimony.Controllers
                 //use this WSHttpBinding_ILoginService for http protocol communication 
                 LoginServices.LoginServiceClient client = new LoginServices.LoginServiceClient("WSHttpBinding_ILoginService");
 
+                //in a similar pattern we are creating registration phase 1 service obj
+                RegistrationPhaseI.RegistrationPhaseIClient regClient = new RegistrationPhaseI.RegistrationPhaseIClient("NetTcpBinding_IRegistrationPhaseI");
+                regClient.IsRegistrationEnabledToday();
+                //by the way above 2 lines code no use of it. But we are implemenetd how second service can be updated and invoked.
+
+
                 //use this NetTcpBinding_ILoginService when we want communication should be carried out through TCP protocol.
                 //LoginServices.LoginServiceClient client = new LoginServices.LoginServiceClient("NetTcpBinding_ILoginService");
 
