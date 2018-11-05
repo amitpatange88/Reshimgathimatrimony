@@ -53,6 +53,24 @@
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdatedDate" Type="datetime" />
         </EntityType>
+        <Function Name="GetLoginDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+                <Property Name="UserName" Type="varchar" MaxLength="255" />
+                <Property Name="Password" Type="varchar" MaxLength="255" />
+                <Property Name="UserType" Type="bit" />
+                <Property Name="IsVerified" Type="bit" />
+                <Property Name="CreateDate" Type="datetime" />
+                <Property Name="UpdatedDate" Type="datetime" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="GetLoginDetailsProc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="input" Type="varchar" Mode="In" />
+        </Function>
         <EntityContainer Name="ReshimgathiMatrimonyModelStoreContainer">
           <EntitySet Name="AppConstants" EntityType="Self.AppConstants" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
@@ -76,6 +94,10 @@
           <EntitySet Name="LoginEvents" EntityType="ReshimgathiMatrimonyModel.LoginEvent" />
           <EntitySet Name="Logins" EntityType="ReshimgathiMatrimonyModel.Login" />
           <EntitySet Name="RegistrationPhase1" EntityType="ReshimgathiMatrimonyModel.RegistrationPhase1" />
+          <FunctionImport Name="GetLoginDetails" IsComposable="true" ReturnType="Collection(ReshimgathiMatrimonyModel.GetLoginDetails_Result)" />
+          <FunctionImport Name="GetLoginDetailsProc" ReturnType="Collection(ReshimgathiMatrimonyModel.GetLoginDetailsProc_Result)">
+            <Parameter Name="input" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="LoginEvent">
           <Key>
@@ -117,6 +139,24 @@
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
         </EntityType>
+        <ComplexType Name="GetLoginDetails_Result">
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="String" Name="UserName" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Password" Nullable="true" MaxLength="255" />
+          <Property Type="Boolean" Name="UserType" Nullable="true" />
+          <Property Type="Boolean" Name="IsVerified" Nullable="true" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="UpdatedDate" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="GetLoginDetailsProc_Result">
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="String" Name="UserName" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Password" Nullable="true" MaxLength="255" />
+          <Property Type="Boolean" Name="UserType" Nullable="true" />
+          <Property Type="Boolean" Name="IsVerified" Nullable="true" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="UpdatedDate" Nullable="true" Precision="23" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -175,6 +215,32 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetLoginDetails" FunctionName="ReshimgathiMatrimonyModel.Store.GetLoginDetails">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReshimgathiMatrimonyModel.GetLoginDetails_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserType" ColumnName="UserType" />
+                <ScalarProperty Name="IsVerified" ColumnName="IsVerified" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetLoginDetailsProc" FunctionName="ReshimgathiMatrimonyModel.Store.GetLoginDetailsProc">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ReshimgathiMatrimonyModel.GetLoginDetailsProc_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserType" ColumnName="UserType" />
+                <ScalarProperty Name="IsVerified" ColumnName="IsVerified" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

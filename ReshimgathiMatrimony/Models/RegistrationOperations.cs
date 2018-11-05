@@ -36,8 +36,9 @@ namespace ReshimgathiMatrimony.Models
                 record.UpdatedDate = DateTime.Now;
 
                 var response = db.RegistrationPhase1.Add(record);
+                
                 db.SaveChanges();
-
+                
                 if (response != null)
                 {
                     return true;

@@ -12,14 +12,14 @@ namespace ReshimgathiMatrimony
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class ReshimgathiMatrimonyEntities : DbContext
     {
         public ReshimgathiMatrimonyEntities()
             : base("name=ReshimgathiMatrimonyEntities")
         {
-            //Disable initializer
-            Database.SetInitializer<ReshimgathiMatrimonyEntities>(null);
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -31,5 +31,20 @@ namespace ReshimgathiMatrimony
         public virtual DbSet<LoginEvent> LoginEvents { get; set; }
         public virtual DbSet<Login> Logins { get; set; }
         public virtual DbSet<RegistrationPhase1> RegistrationPhase1 { get; set; }
+    
+        [DbFunction("ReshimgathiMatrimonyEntities", "GetLoginDetails")]
+        public virtual IQueryable<GetLoginDetails_Result> GetLoginDetails()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<GetLoginDetails_Result>("[ReshimgathiMatrimonyEntities].[GetLoginDetails]()");
+        }
+    
+        public virtual ObjectResult<GetLoginDetailsProc_Result> GetLoginDetailsProc(string input)
+        {
+            var inputParameter = input != null ?
+                new ObjectParameter("input", input) :
+                new ObjectParameter("input", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetLoginDetailsProc_Result>("GetLoginDetailsProc", inputParameter);
+        }
     }
 }

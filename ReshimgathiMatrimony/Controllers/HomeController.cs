@@ -16,6 +16,9 @@ namespace ReshimgathiMatrimony.Controllers
             return View(); 
         }
 
+        /// <summary>
+        /// Clear the session variables
+        /// </summary>
         public void ClearSession()
         {
             Session["IsLogin"] = "block";
@@ -23,6 +26,9 @@ namespace ReshimgathiMatrimony.Controllers
             Session["SessionId"] = string.Empty;
         }
 
+        /// <summary>
+        /// Initializ the session and if not then clear the session call.
+        /// </summary>
         public void InitializeSession()
         {
             if(Session["SessionId"] == null)

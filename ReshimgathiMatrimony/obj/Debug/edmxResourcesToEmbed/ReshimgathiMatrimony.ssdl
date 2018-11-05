@@ -48,6 +48,24 @@
     <Property Name="CreateDate" Type="datetime" />
     <Property Name="UpdatedDate" Type="datetime" />
   </EntityType>
+  <Function Name="GetLoginDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="255" />
+          <Property Name="Password" Type="varchar" MaxLength="255" />
+          <Property Name="UserType" Type="bit" />
+          <Property Name="IsVerified" Type="bit" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="UpdatedDate" Type="datetime" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="GetLoginDetailsProc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="input" Type="varchar" Mode="In" />
+  </Function>
   <EntityContainer Name="ReshimgathiMatrimonyModelStoreContainer">
     <EntitySet Name="AppConstants" EntityType="Self.AppConstants" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />

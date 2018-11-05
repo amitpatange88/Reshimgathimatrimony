@@ -34,9 +34,15 @@ namespace ReshimgathiMatrimony.Models
 
         public bool IsLoggedUserPresent(string UserName, string Password)
         {
-            throw new Exception("Manual exception thrown.");
+            //throw new Exception("Manual exception thrown.");
             using (ReshimgathiMatrimonyEntities db = new ReshimgathiMatrimonyEntities())
             {
+                //calling a function from database using entity framework
+                //IQueryable loginResult = db.GetLoginDetails();
+
+                //calling a stored procedure from databas using entity framework
+                //var procResult = db.GetLoginDetailsProc(string.Empty);
+
                 var IsUSerPresent = db.Logins.Where(x => x.UserName == UserName && x.Password == Password).FirstOrDefault();
 
                 if (IsUSerPresent != null)

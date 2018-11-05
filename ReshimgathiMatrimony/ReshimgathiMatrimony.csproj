@@ -208,6 +208,12 @@
     <Compile Include="Controllers\SigninController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="FileUtility.cs" />
+    <Compile Include="GetLoginDetailsProc_Result.cs">
+      <DependentUpon>ReshimgathiMatrimony.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetLoginDetails_Result.cs">
+      <DependentUpon>ReshimgathiMatrimony.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

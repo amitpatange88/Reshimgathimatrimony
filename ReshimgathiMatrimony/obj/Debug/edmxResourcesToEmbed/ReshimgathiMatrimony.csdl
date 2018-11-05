@@ -13,6 +13,10 @@
     <EntitySet Name="LoginEvents" EntityType="ReshimgathiMatrimonyModel.LoginEvent" />
     <EntitySet Name="Logins" EntityType="ReshimgathiMatrimonyModel.Login" />
     <EntitySet Name="RegistrationPhase1" EntityType="ReshimgathiMatrimonyModel.RegistrationPhase1" />
+    <FunctionImport Name="GetLoginDetails" IsComposable="true" ReturnType="Collection(ReshimgathiMatrimonyModel.GetLoginDetails_Result)" />
+    <FunctionImport Name="GetLoginDetailsProc" ReturnType="Collection(ReshimgathiMatrimonyModel.GetLoginDetailsProc_Result)">
+      <Parameter Name="input" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="LoginEvent">
     <Key>
@@ -54,4 +58,22 @@
     <Property Name="CreateDate" Type="DateTime" Precision="3" />
     <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
   </EntityType>
+  <ComplexType Name="GetLoginDetails_Result">
+    <Property Type="Guid" Name="Id" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="255" />
+    <Property Type="Boolean" Name="UserType" Nullable="true" />
+    <Property Type="Boolean" Name="IsVerified" Nullable="true" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="UpdatedDate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="GetLoginDetailsProc_Result">
+    <Property Type="Guid" Name="Id" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="255" />
+    <Property Type="Boolean" Name="UserType" Nullable="true" />
+    <Property Type="Boolean" Name="IsVerified" Nullable="true" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="UpdatedDate" Nullable="true" Precision="23" />
+  </ComplexType>
 </Schema>
